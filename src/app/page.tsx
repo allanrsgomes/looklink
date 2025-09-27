@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     setIsLoaded(true);
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
@@ -222,9 +222,9 @@ export default function Home() {
             }`}
             style={{ transitionDelay: '1100ms' }}
           >
-            <div className="flex items-center colun justify-center space-x-1 text-gray-500 text-sm mb-2">
+            <div className="flex items-center justify-center space-x-1 text-gray-500 text-sm mb-2">
               <p className="mt-2 text-sm">Feito com ❤️ por{" "}
-                <a href="https://gomesdigitals.com" className="hover:text-red-300 hover:scale-105 transition-all duration-300">
+                <a href="https://gomesdigitals.com" className="hover:text-red-400 hover:scale-105 transition-all duration-300">
                   Gomes Digital
                 </a>
               </p>
