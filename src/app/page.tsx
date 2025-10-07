@@ -21,7 +21,7 @@ export default function Home() {
   const companyData = {
     name: "Look Bike",
     tagline: "Especialista em Vendas & Manutenção",
-    bio: "Pedalar é liberdade, cuidar da bike é essencial 🚴‍♂️",
+    bio: "Pedalar é liberdade, cuidar da bike é essencial",
     location: "Alvorada",
     founded: "Desde 1994"
   };
@@ -30,7 +30,7 @@ export default function Home() {
     {
       title: "Catálogo",
       subtitle: "Veja toda nossa linha",
-      url: "https://drive.google.com/drive/folders/10TPJQGp_RnVVyyfsaH5vHMZgP9M2SYtJ?fbclid=PAZXh0bgNhZW0CMTEAAafUQNdDzgDKgO9ctD8_FDTYQu_KS0xdLvXPrFBVVAGiuQ3Q6lRPBgBMDNkL-g_aem_bb6taNKVNviSHPEFyizsYw",
+      url: "https://hhuhugtf9vdbeuo8.public.blob.vercel-storage.com/pdf/catalago-lookbike.pdf",
       icon: ShoppingBag,
       color: "from-red-500 to-red-600",
       stats: "500+ produtos",
@@ -48,7 +48,7 @@ export default function Home() {
     {
       title: "Look Brinquedos",
       subtitle: "Siga nosso perfil de brinquedos",
-      url: "https://instagram.com/look_brinquedos/",
+      url: "https://instagram.com/look_brinquedos",
       icon: Gift,
       color: "from-pink-500 to-purple-500",
       stats: "2.2k seguidores",
@@ -76,8 +76,8 @@ export default function Home() {
   ];
 
   const socialLinks = [
-    { icon: Instagram, url: "https://instagram.com//look_bike/", color: "hover:text-red-400", label: "Look Bike" },
-    { icon: Instagram, url: "https://instagram.com/look_brinquedos/", color: "hover:text-purple-500", label: "Look Brinquedos" }
+    { icon: Instagram, url: "https://instagram.com//look_bike", color: "hover:text-red-400", label: "Look Bike" },
+    { icon: Instagram, url: "https://instagram.com/look_brinquedos", color: "hover:text-purple-500", label: "Look Brinquedos" }
   ];
 
   return (
@@ -96,7 +96,7 @@ export default function Home() {
           <div className={`text-center transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
             <div className="relative inline-block mb-6">
-              <div className="w-40 h-32 rounded-3xl bg-white p-3 shadow-2xl relative overflow-hidden">
+              <div className="w-40 aspect-square rounded-full bg-white p-3 shadow-2xl relative overflow-hidden">
                 {/* Adicione sua imagem aqui - substitua o src pela URL da sua imagem */}
                 <img
                   src="/logo-lookbike.png"
@@ -117,11 +117,8 @@ export default function Home() {
               </div>
 
               {/* Badges */}
-              <div className="absolute -top-2 -right-2 px-3 py-1 rounded-full text-white text-xs font-bold animate-bounce" style={{ backgroundColor: '#e43438' }}>
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full text-white text-xs font-bold animate-bounce bg-red-600" style={{ backgroundColor: '#e43438' }}>
                 ONLINE
-              </div>
-              <div className="absolute -bottom-2 -left-2 px-2 py-1 rounded-full text-white text-xs font-bold" style={{ backgroundColor: '#2c2c2c' }}>
-                🚴‍♂️ BIKE
               </div>
             </div>
 
@@ -133,7 +130,7 @@ export default function Home() {
                 {companyData.name}
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-2">{companyData.tagline}</p>
+            <p className="text-xl text-gray-300">{companyData.tagline}</p>
             <p className="text-white/90 mb-6 text-lg">{companyData.bio}</p>
 
             <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
@@ -222,16 +219,17 @@ export default function Home() {
             }`}
             style={{ transitionDelay: '1100ms' }}
           >
-            <div className="flex items-center justify-center space-x-1 text-gray-500 text-sm mb-2">
+            <div className="text-gray-600 text-xs">
+              <p className="mt-2 text-sm">Copyright &copy; {currentYear}. Todos os direitos reservados.</p>
+            </div>
+            <div className="flex items-center justify-center space-x-1 text-gray-600 text-sm mb-2">
               <p className="mt-2 text-sm">Feito com ❤️ por{" "}
                 <a href="https://gomesdigitals.com" className="hover:text-red-400 hover:scale-105 transition-all duration-300">
                   Gomes Digital
                 </a>
               </p>
             </div>
-            <p className="text-gray-600 text-xs">
-              <p className="mt-2 text-sm">Copyright &copy; {currentYear}. Todos os direitos reservados.</p>
-            </p>
+
           </div>
         </div>
       </div>
